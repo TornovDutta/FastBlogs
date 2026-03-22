@@ -1,8 +1,11 @@
 from pydantic import BaseModel
 
-class BlogCreate(BaseModel):
+class BlogBase(BaseModel):
     title: str
     content: str
+
+class BlogRequeste(BaseModel):
+    pass
 
 
 class BlogResponse(BaseModel):
@@ -11,4 +14,4 @@ class BlogResponse(BaseModel):
     content: str
 
     class Config:
-        from_attributes = True
+        orm_attribute = True
