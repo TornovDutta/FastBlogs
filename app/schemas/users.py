@@ -6,7 +6,7 @@ class UserBase(BaseModel):
     name: str
     email: EmailStr
 
-class UserRequeste(UserBase):
+class UserCreate(UserBase):
     pass
 class UserResponse(UserBase):
     id: int
